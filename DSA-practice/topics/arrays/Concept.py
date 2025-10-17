@@ -52,3 +52,43 @@ print(array)
 
 # prints the array after slicing it from index 1 to 4
 print(array[1:4])   
+
+# This is how we can convert a list into an array
+list1 = [1,2,3,4,5]
+array1 = arr.array('i', list1)
+print(array1)
+
+# This is how we can convert a tuple into an array
+tuple1 = (1,2,3,4,5)
+array2 = arr.array('i', tuple1)
+print(array2)
+
+# This is how we can convert a string into an array
+string1 = "hello"
+array3 = arr.array('u', string1)
+print(array3)
+
+# This is how we can convert a set into an array
+set1 = {1,2,3,4,5}
+array4 = arr.array('i', set1)
+print(array4)
+
+# This is how we can convert a dictionary into an array
+dict1 = {1:'a', 2:'b', 3:'c'}
+array5 = arr.array('i', dict1.keys())
+print(array5)
+array6 = arr.array('u', dict1.values())
+print(array6)
+
+# This is how we can convert a range into an array
+range1 = range(1,6)
+array7 = arr.array('i', range1)
+print(array7)
+
+# This is how we take input from the user to create an array
+n = int(input("Enter the number of elements in the array: "))
+array8 = arr.array('i', [])
+for i in range(n):
+    element = int(input("Enter element: "))
+    array8.append(element)
+print(array8)
